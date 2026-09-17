@@ -1,13 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
-    </head>
-    <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
-    </body>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jiahui Du — UIUC MCS student. Software engineering, AI, and interactive systems.">
+    <title>Jiahui Du — Portfolio</title>
+</head>
+
+<body>
+    <a class="skip" href="#home">Skip to content</a>
+    <header class="header">
+        <div class="container nav-shell">
+            <a class="logo" href="#home" aria-label="Jiahui Du home">
+                JD<span>.</span>
+            </a>
+
+            <nav id="nav" aria-label="Main navigation">
+                <a href="#home" aria-current="location">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#beyond">Beyond code</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <a class="nav-email" href="mailto:jiahuid3@illinois.edu">
+                Let’s talk ↗
+            </a>
+        </div>
+    </header>
+    <main>
+        <section id="home" class="hero dark">
+            <div class="container hero-grid">
+                <div>
+                    <p class="eyebrow">● UIUC · MASTER OF COMPUTER SCIENCE</p>
+                    <h1>Jiahui Du<span>.</span></h1>
+                    <p class="hero-statement">Thoughtful software.<br><em>Real-world curiosity.</em></p>
+                    <p class="hero-description">I build across software engineering, machine learning, and interactive
+                        systems — turning complex problems into experiences people can use.</p>
+                    <div class="actions"><a class="button gold" href="#projects">Explore my work ↗</a><a
+                            class="button outline" data-resume aria-disabled="true">Resume · coming soon</a></div>
+                    <div class="hero-meta"><span>Urbana–Champaign, IL</span><span>MCS · Class of 2028</span></div>
+                </div>
+                <figure class="portrait" id="portrait">
+                    <div class="portrait-art placeholder"><span class="orbit"></span><span
+                            class="orbit second"></span><span class="initials">JD</span><span class="small">A PERSONAL
+                            PERSPECTIVE</span></div>
+                    <figcaption>ENGINEERING × CURIOSITY <span>01 / PROFILE</span></figcaption>
+                </figure>
+            </div>
+            <div class="container hero-bottom"><span>SOFTWARE / AI / INTERACTIVE SYSTEMS</span><a href="#about">Get to
+                    know me ↓</a></div>
+        </section>
+        <section id="about" class="section">
+            <div class="container">
+                <p class="eyebrow">01 / ABOUT</p>
+                <h2>An engineer’s mindset.<br><span class="muted">A maker’s curiosity.</span></h2>
+                <div class="about-grid">
+                    <p class="intro">I’m a Master of Computer Science student at the University of Illinois
+                        Urbana-Champaign. My work connects dependable software, data-driven exploration, and
+                        human-centred interaction.</p>
+                    <div class="education">
+                        <article>
+                            <p class="small">2026 — EXPECTED 2028</p>
+                            <h3>University of Illinois Urbana-Champaign</h3>
+                            <p>Master of Computer Science</p>
+                        </article>
+                        <article>
+                            <p class="small">2022 — 2026</p>
+                            <h3>Xi’an Jiaotong-Liverpool University</h3>
+                            <p>BSc · Information and Computing Science<br>First-Class Honours · GPA 3.86 / 4.0</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="skills">
+                    <article><span class="number">01</span>
+                        <h3>Software engineering</h3>
+                        <p>Building well-structured systems, from role-based permissions to graph algorithms.</p>
+                        <div class="tags"><span>Java</span><span>SQL</span><span>Spring Boot</span><span>Vue</span>
+                        </div>
+                    </article>
+                    <article><span class="number">02</span>
+                        <h3>AI & data</h3>
+                        <p>Developing workflows for learning from data, evaluating models, and understanding their
+                            limits.</p>
+                        <div class="tags"><span>Python</span><span>PyTorch</span><span>scikit-learn</span></div>
+                    </article>
+                    <article><span class="number">03</span>
+                        <h3>Interactive systems</h3>
+                        <p>Bringing ideas to life through graphics, game behaviour, and iterative prototyping.</p>
+                        <div class="tags"><span>Unity / C#</span><span>OpenGL</span><span>UX research</span></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="section project-section">
+            <div class="container">
+                <div class="heading">
+                    <div>
+                        <p class="eyebrow">02 / PROJECTS</p>
+                        <h2>Ideas, engineered.</h2>
+                    </div>
+                    <p class="muted">A selection of systems I’ve built<br>and problems I’ve explored.</p>
+                </div>
+                <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Selected projects"
+                    tabindex="0">
+                    <div id="slides"></div>
+                    <div class="carousel-footer">
+                        <p id="slide-status" aria-live="polite" aria-atomic="true"></p>
+                        <div class="controls"><button id="previous" class="arrow" aria-label="Previous project"
+                                type="button">←</button>
+                            <div id="dots"></div><button id="next" class="arrow" aria-label="Next project"
+                                type="button">→</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="more">
+                    <p class="small">MORE EXPLORATIONS</p><button data-project="aigc" type="button">AIGC recruitment
+                        analysis ↗</button><button data-project="vr" type="button">Multi-perspective VR storytelling
+                        ↗</button><button data-project="wander" type="button">Wander Genius · UX research ↗</button>
+                </div>
+            </div>
+        </section>
+        <section id="experience" class="section">
+            <div class="container experience-grid">
+                <div>
+                    <p class="eyebrow">03 / EXPERIENCE</p>
+                    <h2>Beyond the<br>classroom.</h2>
+                    <p class="section-note">Real systems, real constraints,<br>and real people.</p>
+                </div>
+                <div class="timeline">
+                    <article>
+                        <p class="small">JUL — SEP 2025 · CHANGZHOU</p>
+                        <h3>Software Development Intern</h3>
+                        <p class="company">CRRC Qishuyan Institute</p>
+                        <p>Contributed to computer vision algorithms for safety-gear detection. Built a visual interface
+                            for recognition results and alerts, and supported technical documentation.</p>
+                        <div class="tags"><span>Computer vision</span><span>Frontend</span><span>System
+                                integration</span></div>
+                    </article>
+                    <article>
+                        <p class="small">APR — JUN 2025 · SUZHOU</p>
+                        <h3>Recruitment Intern</h3>
+                        <p class="company">Beijing True Talents Connect</p>
+                        <p>Researched AI and computer science roles and related technology stacks, supporting candidate
+                            identification and initial alignment.</p>
+                    </article>
+                    <article>
+                        <p class="small">JUN — SEP 2024 · CHANGZHOU</p>
+                        <h3>Implementation Consultant</h3>
+                        <p class="company">Jiangsu Xinyouchang Information Technology</p>
+                        <p>Configured ERP solutions, developed SQL queries for integration and customisation, and worked
+                            on site to understand client requirements.</p>
+                        <div class="tags"><span>SQL</span><span>ERP / UFIDA U8</span><span>Client collaboration</span>
+                        </div>
+                    </article>
+                    <article>
+                        <p class="small">JAN — FEB 2024 · CHANGZHOU</p>
+                        <h3>Banking Intern</h3>
+                        <p class="company">Industrial Bank</p>
+                        <p>Supported customer service and branch operations through rotations in lobby management,
+                            lending, and financial retail.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="beyond" class="section dark beyond">
+            <div class="container">
+                <div class="heading">
+                    <div>
+                        <p class="eyebrow">04 / BEYOND CODE</p>
+                        <h2>A different kind<br>of playground.</h2>
+                    </div>
+                    <p class="muted">Interactive worlds. New perspectives.<br>The discipline to keep improving.</p>
+                </div>
+                <div class="beyond-grid">
+                    <div class="video-frame"><video id="showreel" controls playsinline preload="none" hidden
+                            aria-label="Interactive systems showreel"></video>
+                        <div id="video-placeholder"><span class="play" aria-hidden="true">▷</span>
+                            <p class="small">INTERACTIVE SYSTEMS / SHOWREEL</p>
+                            <h3>Worlds built to be explored.</h3>
+                            <p>Unity games & OpenGL experiments</p><span class="soon">Film coming soon</span>
+                        </div>
+                    </div>
+                    <div class="stories">
+                        <article>
+                            <p class="small">RESEARCH</p>
+                            <h3>One story. Multiple perspectives.</h3>
+                            <p>Explored AI-driven VR storytelling through a SURF research project. Contributed to system
+                                design and technical integration, later serving as a technical/team lead.</p>
+                            <p class="awards">Excellent Poster · School Winner<br>Student-Nominated Winner</p>
+                        </article>
+                        <article>
+                            <p class="small">OFF SCREEN</p>
+                            <h3>Precision, in motion.</h3>
+                            <p>Table tennis has been another space for focus and iteration — including the women’s
+                                singles championship at the 2023 XJTLU College Cup.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="section contact">
+            <div class="container">
+                <p class="eyebrow">05 / WHAT’S NEXT</p>
+                <h2>Let’s build<br><em>something meaningful.</em></h2>
+                <p class="section-note">I’d love to connect about software engineering,<br>AI, and interactive systems.
+                </p><a class="email" href="mailto:jiahuid3@illinois.edu">jiahuid3@illinois.edu ↗</a>
+                <div class="social"><a href="https://github.com/VOE-Du" target="_blank" rel="noopener noreferrer"><span
+                            class="icon github" aria-hidden="true"></span>GitHub ↗</a><a
+                        href="https://www.linkedin.com/in/du-jiahui" target="_blank" rel="noopener noreferrer"><span
+                            class="icon linkedin" aria-hidden="true"></span>LinkedIn ↗</a><a data-resume
+                        aria-disabled="true">Resume · coming soon</a></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container"><a class="logo" href="#home">JD<span>.</span></a>
+            <p>© <span id="year">2026</span> Jiahui Du</p><a href="#home">Back to top ↑</a>
+        </div>
+    </footer>
+    <dialog id="details" aria-labelledby="dialog-title"><button class="close" type="button"
+            aria-label="Close project details">✕</button>
+        <div id="dialog-content"></div>
+    </dialog>
+</body>
+
 </html>

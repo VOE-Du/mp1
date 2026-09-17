@@ -1,5 +1,4 @@
 const path = require("path");
-const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -31,14 +30,17 @@ module.exports = {
         test: /\.html$/i,
         loader: "html-loader",
       },
+      {
+        test: /\.pdf$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(mp4|webm)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
   plugins: [
-    new CopyPlugin({
-      patterns: [
-        { from: './assets/', to: './assets/' },
-      ],
-    }),
     new HtmlWebpackPlugin({
       template: "index.html",
       inject: 'body',
@@ -47,5 +49,6 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, "build"),
+    clean: true,
   },
 };
